@@ -16,6 +16,39 @@
 	 perspective: 1000px;
 	 padding: 50px 0px;
 }
+ .birthday-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5vmin;
+  color: #fff;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  opacity: 0;
+  animation: 
+    text-popup 2s ease-out 3s forwards,
+    text-sway 4s ease-in-out 5s infinite;
+}
+
+@keyframes text-popup {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes text-sway {
+  0%, 100% {
+    transform: translateX(-52%);
+  }
+  50% {
+    transform: translateX(-48%);
+  }
+}
  .night {
 	 position: fixed;
 	 left: 50%;

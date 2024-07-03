@@ -14,20 +14,21 @@
 	 background-color: var(--dark-color);
 	 overflow: hidden;
 	 perspective: 1000px;
-	 padding: 50px 0px;
+	 padding: 100px 0px 50px 0px;
 }
  .birthday-text {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 5vmin;
-  color: #fff;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  font-size: 7vmin;
+  color: #fbffff;
+  text-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00, 0 0 30px #ffa500, 0 0 40px #ffd700;
   opacity: 0;
   animation: 
     text-popup 2s ease-out 3s forwards,
     text-sway 4s ease-in-out 5s infinite;
+   z-index: 1000;
 }
 
 @keyframes text-popup {
@@ -60,7 +61,7 @@
 }
  .flowers {
 	 position: relative;
-	 transform: scale(0.9);
+	 transform: scale(0.7875);
 }
  .flower {
 	 position: absolute;
@@ -1005,5 +1006,75 @@
 }
  .not-loaded * {
 	 animation-play-state: paused !important;
+}
+
+.flower--3 .flower__leaf {
+  background-color: #FFD700;
+  background-image: linear-gradient(to top, #DAA520, #FFD700);
+}
+
+.flower--3 .flower__line,
+.flower--3 .flower__line__leaf {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, rgba(255, 255, 255, 0.2)), linear-gradient(to top, transparent 10%, #B8860B, #DAA520);
+}
+
+.flower--1 .flower__leaf {
+  background-color: #FFA500;
+  background-image: linear-gradient(to top, #FF8C00, #FFA500);
+}
+
+.flower--1 .flower__line,
+.flower--1 .flower__line__leaf {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, rgba(255, 255, 255, 0.2)), linear-gradient(to top, transparent 10%, #FF4500, #FF8C00);
+}
+
+.flower--2 .flower__leaf {
+  background-color: #FF69B4;
+  background-image: linear-gradient(to top, #FF1493, #FF69B4);
+}
+
+.flower--2 .flower__line,
+.flower--2 .flower__line__leaf {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent, rgba(255, 255, 255, 0.2)), linear-gradient(to top, transparent 10%, #FF1493, #FF69B4);
+}
+
+.flower--1 .flower__light:nth-child(odd) {
+  background-color: #FFD700;
+}
+
+.flower--2 .flower__light:nth-child(odd) {
+  background-color: #FFA500;
+}
+
+.flower--3 .flower__light:nth-child(odd) {
+  background-color: #FF69B4;
+}
+
+.flower--1 .flower__light:nth-child(even) {
+  background-color: #FBFFFF;
+}
+
+.flower--2 .flower__light:nth-child(even) {
+  background-color: #FBFFFF;
+}
+
+.flower--3 .flower__light:nth-child(even) {
+  background-color: #FBFFFF;
+}
+
+.flower__grass {
+  --c: #9ACD32; 
+}
+
+.long-g .leaf {
+  --c: #7CFC00; 
+}
+
+.flower__white-circle {
+  background-color: #fff;
+}
+
+.flower__white-circle::after {
+  background-image: , linear-gradient(90deg, #ffeb12, #ffce00);
 }
  

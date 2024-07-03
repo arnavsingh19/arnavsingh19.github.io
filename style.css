@@ -29,6 +29,13 @@
     text-popup 2s ease-out 3s forwards,
     text-sway 4s ease-in-out 5s infinite;
    z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-radius: 10px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 90vw; 
 }
 
 @keyframes text-popup {
